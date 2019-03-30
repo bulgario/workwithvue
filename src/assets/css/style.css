@@ -1,0 +1,123 @@
+body {
+    font-size: 14px !important;
+    background-color: #000 !important
+}
+
+h1 {
+    font-size: 36px !important;
+    text-align: left;
+}
+
+h3 {
+    font-size: 26px !important;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.5 !important;
+}
+
+.left {
+    text-align: left;
+}
+
+.headline {
+    font-size: 15px !important;
+}
+
+#app {
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #fff;
+    background: black;
+  }
+
+  .v-input {
+    align-items: flex-start;
+    display: flex;
+    flex: 1 1 auto;
+    font-size: 16px;
+    text-align: left;
+    padding: 7px !important;
+}
+
+.btn-azul-sesc {
+    background-color: #004c99 !important;
+    color: #fff !important;
+}
+
+.btn-cinza {
+    text-transform: capitalize;
+}
+
+.espaco {
+    margin-top: 40%;
+    margin-bottom: 75%;
+}
+
+.logo {
+    margin-bottom: 10%;
+    margin-top: 13%;
+} 
+
+.sesc-bottom-logo {
+    position: relative;
+    top: 60px;
+}
+ 
+.p-minimo {
+    font-size: 14px;
+    padding-top: 3%;
+}
+
+  #nav {
+    padding: 30px;
+  } 
+
+  #nav a {
+    font-weight: bold;
+    color: #2373c2;
+  }
+  
+  #nav a.router-link-exact-active {
+    color: #42b983;
+  }
+
+  #nav {
+    display: none;
+  }
+
+  .v-card__actions {
+      padding: 0px !important;
+  }
+  .v-card__actions .v-btn+.v-btn {
+      margin-left: 0px !important;
+  }
+  .v-btn {
+      padding: 0px 16px !important;
+      border-radius: 0px !important;
+  }
+  .v-card__text {
+      padding: 16px !important;
+      width: 100%;
+  }
+  .v-text-field.v-text-field--solo .v-input__control {
+      min-height: 15px !important;
+      padding: 0;
+  }
+  /* .v-messages {
+      min-height: 1px !important;
+      border-bottom: 1px solid lightgrey !important;
+  } */
+  /* .v-input__slot {
+      min-height: 1px !important;
+      height: 1px !important;
+  }
+  .input-group__messages {
+      min-height: 1px;
+  }
+  .line-height {
+      line-height: 1.5;
+  } */
