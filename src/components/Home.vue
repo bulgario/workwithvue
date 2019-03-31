@@ -16,7 +16,15 @@
                     </v-form>
                     </v-card-text>
                     <v-card-actions block pa-0>
-                    <v-btn large ma-0 depressed block class="btn-azul-sesc" href="/about">Login</v-btn>
+
+
+                     <v-btn large ma-0 depressed block class="btn-azul-sesc">Login</v-btn>
+
+                    
+
+
+
+
                     <AlertHome/>
                 </v-card-actions>
                 </v-card>
@@ -37,11 +45,11 @@
 
 <script>
         import AlertHome from './AlertHome'
-
+       
    export default {  
     name: 'App',
         components: {
-            'AlertHome': AlertHome 
+            'AlertHome': AlertHome,
         }
-   }
+    }
 </script>

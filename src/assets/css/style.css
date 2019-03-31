@@ -25,6 +25,10 @@ p {
     font-size: 15px !important;
 }
 
+.btn-clicked {
+    background-color: red;
+}
+
 #app {
     font-family: 'Roboto', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;

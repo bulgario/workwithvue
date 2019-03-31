@@ -1,108 +1,187 @@
 <template>
- <div id="app">
   <v-app id="inspire">
     <v-navigation-drawer
-      fixed
       v-model="drawerRight"
+      fixed
       right
       clipped
       app
     >
+
+
       <v-list dense>
         <v-list-tile @click.stop="right = !right">
           <v-list-tile-action>
             <v-icon>exit_to_app</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title>Open Temporary Drawer</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar
-      color="blue-grey"
+    <v-toolbar class="gradient-v"
       dark
       fixed
       app
       clipped-right
     >
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-      <v-toolbar-title>Toolbar</v-toolbar-title>
+      <v-toolbar-title class="text">INÍCIO</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-side-icon @click.stop="drawerRight = !drawerRight"></v-toolbar-side-icon>
     </v-toolbar>
     <v-navigation-drawer
-      fixed
       v-model="drawer"
+      fixed
       app
+      class="aside-navigation"
     >
-      <v-list dense>
-        <v-list-tile @click.stop="left = !left">
-          <v-list-tile-action>
-            <v-icon>exit_to_app</v-icon>
+    <v-list dense>
+      <div class="navigation-drawer-logo-position">
+        <img src="../assets/sesc-logo-branco.svg" />
+      </div>
+      <div class="aside-menu-title">MENU PRINCIPAL</div>
+         <v-list-tile-action>
+            Inicio
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title>Open Temporary Drawer</v-list-tile-title>
+            Notificacao SGS
           </v-list-tile-content>
-        </v-list-tile>
+          <v-list-tile-content>
+            Notificacao SGS
+          </v-list-tile-content>
+          <v-list-tile-content>
+            Notificacao SGS
+          </v-list-tile-content>
+          <v-list-tile-content>
+            Notificacao SGS
+          </v-list-tile-content>
+          <v-list-tile-content>
+            Notificacao SGS
+          </v-list-tile-content>
+          <v-list-tile-content>
+            Notificacao SGS
+          </v-list-tile-content>
       </v-list>
     </v-navigation-drawer>
     <v-navigation-drawer
-      temporary
       v-model="left"
+      temporary
       fixed
     ></v-navigation-drawer>
+       <v-navigation-drawer
+        v-model="drawerRight"
+        fixed
+        right
+        clipped
+        app
+        >
+        </v-navigation-drawer>
     <v-content>
       <v-container fluid fill-height>
         <v-layout justify-center align-center>
           <v-flex shrink>
             <v-tooltip right>
-              <v-btn
-                icon
-                large
-                :href="source"
-                target="_blank"
-                slot="activator"
-              >
-                <v-icon large>code</v-icon>
-              </v-btn>
+              <template v-slot:activator="{ on }">
+                <v-btn :href="source" icon large target="_blank" v-on="on">
+                  <v-icon large>code</v-icon>
+                </v-btn>
+              </template>
               <span>Source</span>
+            </v-tooltip>
+            <v-tooltip right>
+              <template v-slot:activator="{ on }">
+                <v-btn icon large href="https://codepen.io/johnjleider/pen/KQrPKJ" target="_blank" v-on="on">
+                  <v-icon large>mdi-codepen</v-icon>
+                </v-btn>
+              </template>
+              <span>Codepen</span>
             </v-tooltip>
           </v-flex>
         </v-layout>
       </v-container>
     </v-content>
     <v-navigation-drawer
+      v-model="right"
       right
       temporary
-      v-model="right"
       fixed
     ></v-navigation-drawer>
-    <v-footer color="blue-grey" class="white--text" app>
-      <span>Vuetify</span>
-      <v-spacer></v-spacer>
-      <span>&copy; 2017</span>
-    </v-footer>
+      <FooterMenu/>
   </v-app>
-</div>
 </template>
 
+<style scoped>
+#inspire {
+  background-color: black;
+}
+
+.aside-menu-title {
+  
+}
+
+.aside-navigation {
+  background-color: grey;
+}
+
+.navigation-drawer-logo-position {
+  height:15%;
+  background-color:#000;
+  padding-bottom:20px;
+  padding-top:20px;
+  position: relative;
+  top: -4px; 
+}
+
+.gradient-v {
+    background: linear-gradient(to bottom, #747678 0%, #000000 100%);
+}
+.gradient-h {
+     background: linear-gradient(to right, #747678 0%, #000000 100%);
+}
+.cinza-sesc {
+  background-color: #747678 !important;
+}
+.cdc {
+    margin-top: 50px;
+}
+.square {
+    float: left;
+    width: 20px;
+    height: 20px;
+}
+.blue {
+  background: #13b4ff;
+  border: 3px solid #fff;
+  border-color: #fff !important;
+}
+.big-number {
+  font-size: 1.6em;
+  font-weight: bold;
+}
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+</style>
+
 <script>
+  import FooterMenu from './FooterMenu'
 
-import Vue from 'vue'
-
-new Vue({
-  el: '#app',
-  data: () => ({
-    drawer: true,
-    drawerRight: true,
-    right: null,
-    left: null
-  }),
-
-  props: {
-    source: String
+  export default {
+    data: () => ({
+      drawer: null,
+      drawerRight: null,
+      right: false,
+      left: false
+    }),
+    props: {
+      source: String
+    },
+    components: {
+      'FooterMenu': FooterMenu
+    }
   }
-})
-
 </script>

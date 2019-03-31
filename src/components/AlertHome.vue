@@ -2,7 +2,7 @@
   <v-layout row justify-center>
     <v-dialog v-model="dialog" persistent max-width="600px">
       <template v-slot:activator="{ on }">
-      <v-btn large ma-0 depressed block flat dark v-on="on" class="btn-on-click btn-cinza" color="grey white--text">Ajuda?</v-btn>
+      <v-btn large ma-0 depressed block flat dark v-on="on" class="btn-on-click btn-cinza btn-something" color="grey white--text">Ajuda?</v-btn>
       </template>
       <v-card>
         <v-card-title>
